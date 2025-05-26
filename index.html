@@ -1,124 +1,797 @@
-<!DOCTYPE HTML>
-<html lang="nb-NO">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <title>Min Medieportefølje</title>
-  </head>
-  <body class="is-preload">
-    <!-- Sidebar -->
-    <section id="sidebar">
-      <div class="inner">
-        <nav>
-          <ul>
-            <li><a href="#intro">Velkommen</a></li>
-            <li><a href="#one">Om meg</a></li>
-            <li><a href="#two">Mine prosjekter</a></li>
-            <li><a href="#three">Ferdigheter</a></li>
-            <li><a href="#four">Kontakt</a></li>
-          </ul>
-        </nav>
+<html dir="ltr" lang="en" class="theme light EHoceA"><head><base href="/"><meta charset="utf-8"><title>Portfolio</title><meta name="app-name" content="export_website"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="_assets/a0684b0780c739e9.vendor.ltr.css" rel="stylesheet" integrity="sha512-JwMCpiHdk95MoUTatfaZJwstzeDnWfvWMJiwnSxZfPmgeCe4yvQDQ+ONMQjIy/Ht72r0TmlE+gvZnYRnpdLdVg==" crossorigin="anonymous"><link href="_assets/25209ca8ac66c804.ltr.css" rel="stylesheet" integrity="sha512-bZaptpu119Uu1y1VFC6XIdKWOeekNbW1/qiSQUCznoC+skbpSexIfSQMB/iAx57BDtPmTYVLIfILdtWvvKhrgQ==" crossorigin="anonymous"><link href="_assets/static_font_4.ltr.css" rel="stylesheet"><link href="_assets/0ce63cefb0eb8230.strings.js" rel="preload" as="script" crossorigin="anonymous" integrity="sha512-buAXN+vDz2M84c823uajnWtVHO/YbFs3YBNV7WK8GjC2zg+Uepf0jGVov/aWyX65ha869EzZBIjWfYqZlD2k4Q==" nonce=""><link href="_assets/041533caa501c2ad.en.js" rel="preload" as="script" crossorigin="anonymous" integrity="sha512-U/NcpiYW3sMfb2HAanqcC5Cgs8TEiIJs89D+Ju1glm6Rjs9NSS/5DKOHhRXtHecFqVZRJpOmLm0ze3ZQN3x2TA==" nonce=""><link href="_assets/f6279fd6de5cde5a.runtime.js" rel="preload" as="script" crossorigin="anonymous" integrity="sha512-BoSZcKMzFR6uLzPNDVSRfEfufVT++4KsQC/BGxhKT0guErbce9jpx0dT2KByplUeX9Y+OsZNI4FL2MkICq2lVw==" nonce=""><link href="_assets/6b0b6cd7b4380852.i3d79q.vendor.js" rel="preload" as="script" crossorigin="anonymous" integrity="sha512-glSI1ZcMUx+fEJqWv9YcgE1tNCr56/uOkUR+FNrA606NNtXNGexG48WkOpi04ftgEqTi5xPNF+dwTGeSe9T0aw==" nonce=""><link href="_assets/1e90d697c2926901.vendor.js" rel="preload" as="script" crossorigin="anonymous" integrity="sha512-GCWBdTLF0E5G6JK5alfe1ZLT7VNy99iy8ibldJiIfZuEsdT+Y2PpNnVaaWDJVLiG8BfS0Aeijs6o7VgUXjZUew==" nonce=""><link href="_assets/62fcd7b47ea787d8.js" rel="preload" as="script" crossorigin="anonymous" integrity="sha512-BdJOE73DLL3Olzduh2vNA/Uk9FhH8r+Rop3fh9dqzChixCK+Jt9kXz+iLaduPGuCit0h/pvLLXQSSuIZLLlNsA==" nonce=""><meta name="referrer" content="strict-origin-when-cross-origin"><meta property="og:title" content="Portfolio"><meta property="og:type" content="website"><link rel="shortcut icon" href="_assets/images/2d0b56e7e51cf11036ad8734bdb67e2d.png"><link rel="icon" href="_assets/images/e53c4bd8da5e491d9ab09e7cf0daf874.png" sizes="192x192"><link rel="apple-touch-icon" href="_assets/images/725b756a69a7d4c235070e51acd85560.png" sizes="180x180"><script nonce="">
+      document.addEventListener('contextmenu', (e) => {
+        const isMedia = ['img', 'image', 'video', 'svg', 'picture'].some(
+          tagName => tagName.localeCompare(e.target.tagName, undefined, { sensitivity: 'base' }) === 0,
+        );
+        isMedia && e.preventDefault();
+      });
+    </script><script nonce="">
+  const lang = navigator.language ? navigator.language : 'en';
+  window.canva_installFooter = (container) => {
+    if (!(container instanceof HTMLDivElement)) {
+      return;
+    }
+    fetch('_footer?lang=' + encodeURIComponent(lang)).then(response => {
+      if (response.status !== 200) {
+        return;
+      }
+      response.text().then(footerStr => {
+        const div = document.createElement('div');
+        div.innerHTML = footerStr;
+        for (const child of [...div.children]) {
+          if (child.tagName.toLowerCase() !== 'script') {
+            container.append(child);
+          }
+        }
+
+        (() => { !function(e){"use strict";const t=document.getElementById("modal_backdrop"),n=document.getElementById("modal"),o=document.getElementById("captcha-form"),c=document.getElementById("report_button"),d=document.getElementById("form_report"),s=document.getElementById("form_cancel"),l=document.getElementById("form_submit_reason"),a=document.getElementById("form_go_back"),r=document.getElementById("form_submit_captcha"),m=document.getElementById("form_close"),i=document.getElementById("form_close_initial"),u=document.getElementById("report_reason_0"),p=document.getElementById("error_message"),_=document.getElementById("error_message_captcha"),y=new Map;y.set(0,document.getElementById("form_step_terms")),y.set(1,document.getElementById("form_step_report_reason")),y.set(4,document.getElementById("form_step_report_other"));const E=document.getElementById("form_step_report_ip");E&&y.set(5,E),y.set(2,document.getElementById("form_step_captcha")),y.set(3,document.getElementById("form_step_success"));const f=document.getElementById("report_reason_4"),g=document.getElementById("form_close_ip"),h=document.getElementById("form_go_back_ip"),I=document.getElementById("report_reason_other"),k=document.getElementById("form_close_other"),w=document.getElementById("form_go_back_other");function v(){t.classList.remove("active"),n.classList.remove("active"),c.classList.remove("active"),c.focus()}function B(e){y.forEach(((t,n)=>{n===e?(t.style.display="block",L(t)):t.style.display="none"}))}let b,C=!1;const T="NETEASE"===window.C_CAPTCHA_IMPLEMENTATION?()=>b:()=>{const e=o.elements.namedItem("g-recaptcha-response");return null==e?void 0:e.value};t.onclick=v,s.onclick=v,m.onclick=v,i.onclick=v,g&&(g.onclick=v),k.onclick=v,c.onclick=function(){y.forEach(((e,t)=>{e.style.display=0===t?"block":"none"})),t.classList.add("active"),n.classList.add("active"),c.classList.add("active"),u.checked=!0,setTimeout((()=>{L(y.get(0))}),350)},d.onclick=d.dataset.reportUrl?function(){const{origin:e,pathname:t}=window.location,n=e+t,o=d.dataset.reportUrl+encodeURIComponent(n);window.open(o)}:()=>B(1),l.onclick=()=>{null!=E&&f.checked?B(5):I.checked?B(4):(B(2),function(){if(C)return;const e=document.createElement("script");e.src="NETEASE"===window.C_CAPTCHA_IMPLEMENTATION?"https://cstaticdun.126.net/load.min.js":"https://www.google.com/recaptcha/api.js",e.async=!0,e.defer=!0,document.head.appendChild(e),C=!0,e.onload="NETEASE"===window.C_CAPTCHA_IMPLEMENTATION?()=>{var e;null===(e=window.initNECaptcha)||void 0===e||e.call(window,{captchaId:window.C_CAPTCHA_KEY,element:"#netease-captcha",protocol:"https",width:"auto",onVerify:(e,t)=>{b=t.validate}})}:()=>{}}())},a.onclick=()=>B(1),h&&(h.onclick=()=>B(1)),w.onclick=()=>B(1),o.addEventListener("submit",(function(e){e.preventDefault(),p.style.display="none",_.style.display="none";const t=function(){let e="";const t=document.getElementsByName("report_reason");for(let n=0;n<t.length;n++){const o=t[n];o.checked&&(e=o.value)}return e}(),n=T();if(!n)return void(_.style.display="block");const o={reason:t,challenge:n},c=window.location.origin+window.location.pathname+"/_api/report";r.classList.add("loading"),fetch(c,{method:"POST",body:JSON.stringify(o),headers:{"Content-Type":"application/json; charset=utf-8"}}).then((e=>{r.classList.remove("loading"),e.ok?B(3):p.style.display="block"}))}));const A=new Map,L=e=>{const t=A.get(e);null!=t&&document.removeEventListener("keydown",t);const n=e.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),o=e,c=n[n.length-1],d=function(e){("Tab"===e.key||9===e.keyCode)&&(e.shiftKey?document.activeElement===o&&(c.focus(),e.preventDefault()):document.activeElement===c&&(o.focus(),e.preventDefault()))};A.set(e,d),document.addEventListener("keydown",d),o.focus()};e.keepFocus=L,Object.defineProperty(e,"__esModule",{value:!0})}({}); })();
+      });
+    });
+  }
+</script><script nonce="">
+    window.C_CAPTCHA_IMPLEMENTATION = 'RECAPTCHA';
+</script><script nonce="">
+    window.C_CAPTCHA_KEY = '6Ldk59waAAAAAMPqkICbJjfMivZLCGtTpa6Wn6zO';
+</script><style type="text/css"></style><style type="text/css"></style><link rel="stylesheet" type="text/css" href="_assets/1ae932a138400a96.ltr.css"><link rel="stylesheet" type="text/css" href="_assets/5eb15c719412ac66.ltr.css"><link rel="stylesheet" type="text/css" href="_assets/fbdc2fa6da953cbd.ltr.css"></head><body><script nonce="">document.documentElement.classList.replace('adaptive', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script><div id="root"><div class="yIDCqA"><main class="_8OlyIw"><div class="_4KoDHA"><div data-testid="menu-fragment" class="l3vAqg"><nav class="jDe9Eg" style="background-color: rgb(13, 13, 13); top: 0px;"><ul class="DBPC9g" style="background-color: rgb(13, 13, 13);"><li class="KJpqkQ" style="color: rgb(255, 255, 255);"><a class="Ej7lEg pTsp_A _3bC2IQ" href="" draggable="false" role="menuitem"><span style="font-family: &quot;YAEt1cjGqjs 0&quot;, -apple-system, BlinkMacSystemFont, sans-serif;">Framside</span></a></li><li class="KJpqkQ" style="color: rgb(255, 255, 255);"><a class="Ej7lEg pTsp_A _3bC2IQ" href="" draggable="false" role="menuitem"><span style="font-family: &quot;YAEt1cjGqjs 0&quot;, -apple-system, BlinkMacSystemFont, sans-serif;">Ferdigheter</span></a></li><li class="KJpqkQ" style="color: rgb(255, 255, 255);"><a class="Ej7lEg pTsp_A _3bC2IQ" href="" draggable="false" role="menuitem"><span style="font-family: &quot;YAEt1cjGqjs 0&quot;, -apple-system, BlinkMacSystemFont, sans-serif;">Tidligere Arbeid</span></a></li></ul></nav><div class="_65lpxA"><div class="ZRRuDw"><div style="height: 100%; width: 100%;"><section id="PB3DH1WDGjKflr1m" class="rGeu6w zz6K7Q" data-scroll-ready="true"><div><div class="_8jGYJw" style="width: 1350px; height: 759.004px;"><div class="fMSICA h517IA" aria-hidden="false"><div class="_5yhCRQ"><div class="onhyOQ" style="width: 1350px; height: 759.004px; align-items: center;"><div class="twbtjQ"><div class="GDnEHQ" style="width: 1350px; height: 759.004px; background-color: rgb(255, 255, 255);"><div class="o2Yl2g"><div class="_mXnjA" lang="en" style="width: 1350px; height: 759.004px;"><div class="_6t4CHA"><div class="a26Xuw"><div class="fbzKiw" style="background: rgb(13, 13, 13);"></div></div></div><div style="position: absolute; top: 75.9004px; left: 75.9004px; width: 1198.2px; height: 607.204px;"></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 365.491px; height: 548.237px; transform: translate(775.581px, 89.2837px);"><div class="DF_utQ" style="width: 365.491px; height: 548.237px;"><div class="Zp7NQw"><div class="a26Xuw"><div class="PcHy7w"><div class="uk_25A Ty61NA"><div class="Izwocg" style="width: 365.491px; height: 548.237px; transform: translate(-5.68434e-14px, 0px) rotate(0deg);"><img class="_7_i_XA" crossorigin="anonymous" src="https://kristiansinportfolio.my.canva.site/_assets/media/889a7820c50bd765c8e78c27e376fc2c.jpg" draggable="false"></div></div></div></div><div style="position: absolute; top: 0px; left: 0px; transform-origin: 0px 0px; height: 548.237px; width: 365.491px; pointer-events: none; transform: scale(1);"></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 674.667px; height: 237.453px; transform: translate(98.8783px, 214.542px);"><div class="DF_utQ" style="width: 606.738px; height: 169.524px; transform: translate(33.9643px, 33.9643px) scale(1);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 613.929px; height: 171.534px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 18.0878px);"><p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YADK3_DWcOc 0&quot;, auto; font-size: 109.623px; color: rgb(172, 172, 172); line-height: 95px; letter-spacing: -0.02em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(172, 172, 172); font-kerning: none; text-decoration: none;">portfolio:</span></p><p class="cgHgbA nxe3IQ Xp24Nw" style="font-family: &quot;YADK4O60vp0 0&quot;, auto; font-size: 57.2475px; color: rgb(172, 172, 172); line-height: 49px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(172, 172, 172); font-kerning: none; text-decoration: none;">Kristian Andersen</span></p></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 276.874px; height: 39.8496px; transform: translate(-5.59464px, 709.109px);"><div class="DF_utQ" style="width: 265.685px; height: 28.6603px; transform: translate(5.59464px, 5.59464px) scale(1);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 268.834px; height: 29px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA PPKxyg Xp24Nw PanoWQ" style="font-family: &quot;YADK4O60vp0 0&quot;, auto; font-size: 24.2392px; color: rgb(142, 142, 142); line-height: 29px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><a href="#page-0" target="_self" draggable="false" rel="noopener nofollow" class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(142, 142, 142); font-kerning: none; text-decoration: underline;">Jobb med meg</a></p></div></div></div></div></div></div></div><div class="QhExXw pKfnlA" style="width: 1350px; height: 759.004px; margin: 0px;"></div></div></div></div></div></div></div></section><section id="PBXLY76rf8JCJNkV" class="rGeu6w zz6K7Q" data-scroll-ready="true"><div><div class="_8jGYJw" style="width: 1350px; height: 759.004px;"><div class="fMSICA h517IA" aria-hidden="false"><div class="_5yhCRQ"><div class="onhyOQ" style="width: 1350px; height: 759.004px; align-items: center;"><div class="twbtjQ"><div class="GDnEHQ" style="width: 1350px; height: 759.004px; background-color: rgb(255, 255, 255);"><div class="o2Yl2g"><div class="_mXnjA" lang="en" style="width: 1350px; height: 759.004px;"><div class="_6t4CHA"><div class="a26Xuw"><div class="fbzKiw" style="background: rgb(149, 163, 190);"></div></div></div><div style="position: absolute; top: 75.9004px; left: 75.9004px; width: 1198.2px; height: 607.204px;"></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 657.787px; height: 87.6019px; transform: translate(490.406px, 33.6754px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 665.583px; height: 88.6401px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 12.3201px);"><p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAEsdklG4-k 0&quot;, auto; font-size: 74.6671px; color: rgb(17, 17, 24); line-height: 64px; letter-spacing: 0em; --pY_8zA: 0; text-transform: uppercase; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: underline;">Ferdigheter</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 489.08px; height: 65.5437px; transform: translate(502.783px, 368.472px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 494.877px; height: 66.3205px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 9.16026px);"><p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAEsdklG4-k 0&quot;, auto; font-size: 55.5167px; color: rgb(17, 17, 24); line-height: 48px; letter-spacing: 0em; --pY_8zA: 0; text-transform: uppercase; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: underline;">Utdanning</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 538.589px; height: 96.8277px; transform: translate(502.783px, 135.457px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 511.736px; height: 92px; transform: scale(1.05247, 1.05247); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 38.6664px; color: rgb(17, 17, 24); line-height: 46px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Forståelse</span><span class="OYPEnA L7Ipcg" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">  </span><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">for</span><span class="OYPEnA L7Ipcg" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">  </span><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">redigerings<br>program</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 451.998px; height: 78.8673px; transform: translate(478.029px, 261.933px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 527.263px; height: 92px; transform: scale(0.857254, 0.857254); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 38.6664px; color: rgb(17, 17, 24); line-height: 46px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Grunnlegende ferdigheter i 3D -<br>Printing</span><span class="OYPEnA L7Ipcg" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;"> </span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 388.176px; height: 562.46px; transform: translate(53.5254px, 75.9004px);"><div class="Zp7NQw"><svg class="H6KCog"><defs><clipPath id="__id3"><path d="M1.2,1.2L386.97607340746345,1.2L386.97607340746345,561.2596583706843L1.2,561.2596583706843L1.2,1.2"></path></clipPath></defs></svg><div class="TRWryw" style="clip-path: url(&quot;#__id3&quot;);"><div class="a26Xuw"><div class="PcHy7w"><div class="uk_25A Ty61NA" style="transform: scale(-1, 1);"><div class="Izwocg" style="width: 727.763px; height: 1293.8px; transform: translate(-150.499px, -731.342px) rotate(0deg);"><img class="_7_i_XA" crossorigin="anonymous" src="https://kristiansinportfolio.my.canva.site/_assets/media/183ce9229e47b65dd5271bcc466df4c5.jpg" draggable="false"></div></div></div></div></div><div style="position: absolute; top: 0px; left: 0px; transform-origin: 0px 0px; height: 562.46px; width: 388.176px; pointer-events: none; transform: scale(1);"><svg class="mv6V_w" preserveAspectRatio="none" viewBox="0 0 388.17607340746343 562.4596583706842" style="width: 388.176px; height: 562.46px;"><defs><clipPath id="__id4"><path d="M0,0L0,562.4596583706842L388.17607340746343,562.4596583706842L388.17607340746343,0L0,0"></path></clipPath></defs><path d="M0,0L0,562.4596583706842L388.17607340746343,562.4596583706842L388.17607340746343,0L0,0" stroke="#111118" stroke-width="66" stroke-linecap="butt" clip-path="url(#__id4)" fill="none" vector-effect="non-scaling-stroke"></path></svg></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 275.35px; height: 76.4673px; transform: translate(502.783px, 434.016px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 252.062px; height: 70px; transform: scale(1.09239, 1.09239); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 29.6642px; color: rgb(17, 17, 24); line-height: 35px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Grunnskole utdanning</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 29.6642px; color: rgb(17, 17, 24); line-height: 35px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">2012 - 2022</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 323.996px; height: 103.768px; transform: translate(848.302px, 401.244px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 262.273px; height: 84px; transform: scale(1.23533, 1.23533); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 24.0001px; color: rgb(17, 17, 24); line-height: 28px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Media og Kommunikasjon VG1</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 24.0001px; color: rgb(17, 17, 24); line-height: 28px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Kopervik Vidergående</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 24.0001px; color: rgb(17, 17, 24); line-height: 28px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">2022 - 2023</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 550.162px; height: 109.083px; transform: translate(441.701px, 540.02px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 484.18px; height: 96px; transform: scale(1.13628, 1.13628); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 27.4893px; color: rgb(17, 17, 24); line-height: 32px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Informasjonsteknologi og medieproduksjon VG1</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 27.4893px; color: rgb(17, 17, 24); line-height: 32px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Haugaland Vidergående skole</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 27.4893px; color: rgb(17, 17, 24); line-height: 32px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">2023 - 2024</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 495.69px; height: 79.8494px; transform: translate(747.323px, 176.27px);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 345.661px; height: 55.6816px; transform: scale(1.43404, 1.43404); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, -2.15922px);"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 21.5922px; color: rgb(17, 17, 24); line-height: 30px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Grunnlegende ferdigheter i</span><span class="OYPEnA L7Ipcg" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">  </span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 21.5922px; color: rgb(17, 17, 24); line-height: 30px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Unreal Engine og html</span><span class="OYPEnA L7Ipcg" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;"> </span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 347.105px; height: 112.811px; transform: translate(930.027px, 592.697px);"><div class="aF9o6Q _0yZ6Qg" role="img" aria-label="" style="writing-mode: horizontal-tb; width: 359.994px; height: 117px; transform: scale(0.964196, 0.964196); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 32.7889px; color: rgb(17, 17, 24); line-height: 39px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Medieproduksjon VG2</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 32.7889px; color: rgb(17, 17, 24); line-height: 39px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Haugaland Vidergående skole</span></p><p class="cgHgbA pYZEjA Xp24Nw" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 32.7889px; color: rgb(17, 17, 24); line-height: 39px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">2024 - 2025</span></p></div></div></div><div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 460.759px; height: 35.8271px; transform: translate(687.434px, 311.113px);"><div class="aF9o6Q _0yZ6Qg" role="img" aria-label="" style="writing-mode: horizontal-tb; width: 501.565px; height: 39px; transform: scale(0.918643, 0.918643); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 32.7889px; color: rgb(17, 17, 24); line-height: 39px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(17, 17, 24); font-kerning: none; text-decoration: none;">Ferdigheter i Kamrabruk</span></p></div></div></div></div></div></div><div class="QhExXw pKfnlA" style="width: 1350px; height: 759.004px; margin: 0px;"></div></div></div></div></div></div></div></section><section id="0" class="rGeu6w zz6K7Q" data-scroll-ready="true"><div><div class="_8jGYJw" style="width: 1350px; height: 759.004px;"><div class="fMSICA h517IA" aria-hidden="false"><div class="_5yhCRQ"><div class="onhyOQ" style="width: 1350px; height: 759.004px; align-items: center;"><div class="twbtjQ"><div class="GDnEHQ" style="width: 1350px; height: 759.004px; background-color: rgb(255, 255, 255);"><div class="o2Yl2g"><div class="_mXnjA" lang="en" style="width: 1350px; height: 759.004px;"><div class="_6t4CHA"><div class="a26Xuw"><div class="fbzKiw" style="background: rgb(13, 13, 13);"></div></div></div><div style="position: absolute; top: 75.9004px; left: 75.9004px; width: 1198.2px; height: 607.204px;"></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 420.586px; height: 384.819px; transform: translate(-202.428px, 220.172px); opacity: 0;"><div class="DF_utQ" style="width: 420.586px; height: 384.819px; transform: translate(420.586px, 0px) scale(1);"><div class="Zp7NQw"><div class="a26Xuw"><div class="PcHy7w"><div class="uk_25A Ty61NA"><div class="Izwocg" style="width: 420.586px; height: 420.586px; transform: translate(0px, -27.0252px) rotate(0deg);"><img class="_7_i_XA" crossorigin="anonymous" src="https://kristiansinportfolio.my.canva.site/_assets/media/32e8b6202830394f82342aed3ae5a01e.jpg" draggable="false"></div></div></div></div><div style="position: absolute; top: 0px; left: 0px; transform-origin: 0px 0px; height: 384.819px; width: 420.586px; pointer-events: none; transform: scale(1);"></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 399.482px; height: 538.291px; transform: translate(422.315px, 181.578px); opacity: 0;"><div class="DF_utQ" style="width: 399.482px; height: 538.291px; transform: translate(399.482px, 0px) scale(1);"><div class="Zp7NQw"><div class="a26Xuw"><div class="PcHy7w"><div class="uk_25A Ty61NA"><div class="Izwocg" style="width: 707.12px; height: 707.12px; transform: translate(-151.67px, -13.5777px) rotate(0deg);"><img class="_7_i_XA" crossorigin="anonymous" src="https://kristiansinportfolio.my.canva.site/_assets/media/0ca2f472863a14a43af352404163335a.jpg" draggable="false"></div></div></div></div><div style="position: absolute; top: 0px; left: 0px; transform-origin: 0px 0px; height: 538.291px; width: 399.482px; pointer-events: none; transform: scale(1);"></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 580.294px; height: 107.124px; transform: translate(-466.497px, 72.8773px); opacity: 0;"><div class="DF_utQ" style="width: 551.247px; height: 78.0779px; transform: translate(565.77px, 14.5232px) scale(1);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 684.273px; height: 96.9195px; transform: scale(0.805595, 0.805595); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 13.4597px);"><p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAEsdklG4-k 0&quot;, auto; font-size: 81.5742px; color: rgb(172, 172, 172); line-height: 70px; letter-spacing: 0em; --pY_8zA: 0; text-transform: uppercase; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(172, 172, 172); font-kerning: none; text-decoration: underline;">Tidligere Arbeid:</span></p></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 351.254px; height: 46.287px; transform: translate(421.157px, 98.8087px); opacity: 0;"><div class="DF_utQ" style="width: 339.557px; height: 34.59px; transform: translate(345.405px, 5.84846px) scale(1);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 343.581px; height: 35px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 29.5889px; color: rgb(172, 172, 172); line-height: 35px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(172, 172, 172); font-kerning: none; text-decoration: none;">3D - Printet snømann</span></p></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 317.631px; height: 39.7643px; transform: translate(453.989px, 130.772px); opacity: 0;"><div class="DF_utQ" style="width: 307.515px; height: 29.6486px; transform: translate(312.573px, 5.05786px) scale(1);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 311.16px; height: 30px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEY8qS0Of8 0&quot;, auto; font-size: 25.589px; color: rgb(255, 49, 49); line-height: 30px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(255, 49, 49); font-kerning: none; text-decoration: none;">(Beklager bakrunnen!)</span></p></div></div></div></div><div class="DF_utQ _lzXBg _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 339.501px; height: 48.7906px; transform: translate(-122.131px, 609.346px); opacity: 0;"><div class="DF_utQ" style="width: 327.277px; height: 36.5666px; transform: translate(333.389px, 6.112px) scale(1);"><div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 331.156px; height: 37px; transform: scale(0.988287, 0.988287); transform-origin: 0px 0px;"><div lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA"><p class="cgHgbA pYZEjA Xp24Nw PanoWQ" style="font-family: &quot;YAEt1cjGqjs 0&quot;, auto; font-size: 30.9222px; color: rgb(172, 172, 172); line-height: 37px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;"><span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(172, 172, 172); font-kerning: none; text-decoration: none;">T - Shorte Design og trykking</span></p></div></div></div></div></div></div></div><div class="QhExXw pKfnlA" style="width: 1350px; height: 759.004px; margin: 0px;"></div></div></div></div></div></div></div></section><section id="PB7mYljzWngLrFLk" class="rGeu6w zz6K7Q" data-scroll-ready="true"><div style="width: 1350px; height: 759.004px; position: relative;"><div style="position: absolute; opacity: 0;"><p>Unreal Engine 4
+</p><p>En vignett laget i Premiere pro
+</p></div><div class="IwXXkw _qImYg JbJFjg _CObZw" style="animation-delay: calc(0.45s);"></div></div></section><section id="PBkdJGWBQQqJ8DY0" class="rGeu6w zz6K7Q" data-scroll-ready="true"><div style="width: 1350px; height: 759.004px; position: relative;"><div style="position: absolute; opacity: 0;"><p>Jobbet med photo og kamrabruk 
+</p><p>Jobbet me bilde redigering i Lightroom
+ og Photoshop
+</p></div><div class="IwXXkw _qImYg JbJFjg _CObZw" style="animation-delay: calc(0.6s);"></div></div></section><div><style>
+    .footer-overflow-container {
+        display: flex;
+        background-color: #000000;
+        position: relative;
+    }
+
+    .footer-container {
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6px;
+    }
+
+    .footer-pill-link {
+        appearance: none;
+        text-decoration: none;
+    }
+
+    .footer-pill {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1000px;
+        border: none;
+        background: none;
+        padding: 4px 8px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        white-space: nowrap;
+        text-decoration: none;
+        font-weight: 600;
+        font-style: normal;
+        font-size: calc(12px * var(--rfso, var(--bfso, 1)));
+        color: #ffffff;
+        transition: background-color 0.2s;
+    }
+    .footer-pill:hover {
+        cursor: pointer;
+    }
+    .footer-pill + .footer-pill {
+        margin-left: 8px;
+    }
+
+    .footer-pill-primary {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-pill-primary:hover > .footer-pill-primary-background {
+        opacity: 1;
+    }
+
+    .footer-pill-primary-background {
+        position: absolute;
+        z-index: -1;
+        border-radius: 1000px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #00C4CC 0%, #7D2AE8 100%);
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.2s;
+    }
+
+    /* Subtle wipe effect */
+    .footer-pill-primary-background::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to right, rgba(125, 42, 232, 0) 0%, #1a1a1a calc(50px + 20%), #1a1a1a 100%);
+        transform: translateX(0);
+        transition: transform 0.7s;
+    }
+    .footer-pill-primary:hover > .footer-pill-primary-background::after {
+        transform: translateX(110%);
+    }
+
+    .footer-pill-primary-background > svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform-origin: center;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    .animation-container {
+        animation: spin linear 12s infinite;
+        animation-play-state: paused;
+    }
+    .footer-pill-primary:hover > .footer-pill-primary-background .animation-container {
+        animation-play-state: running;
+    }
+
+    .footer-pill-secondary {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .footer-pill-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .footer-pill-secondary:active, .footer-pill-secondary.active {
+        background-color: rgba(255, 255, 255, 0.15)
+    }
+
+    .inline-icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    .inline-icon > svg {
+        fill: rgba(218, 218, 218, 1);
+    }
+
+    .inline-icon-logo {
+        display: inline-block;
+        height: 15px;
+        margin-left: 5px;
+    }
+    .inline-icon-logo > svg {
+        height: 100%;
+    }
+
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        transition: opacity 0.35s, visibility 0.35s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .modal-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    .report-form-modal {
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 367px; /* min width for the gcaptcha to fit*/
+        transform: translate3d(0, calc(-100% + 24px), 0);
+        z-index: 10000;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin: 0;
+        box-shadow: 0px 2px 18px 0px rgba(14, 19, 24, 0.25), 0px 0px 1px 0px rgba(14, 19, 24, 0.02);
+        transition-duration: 0.35s;
+        transition-property: opacity, transform, visibility;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .report-form-modal.active {
+        transform: translate3d(0, calc(-100% + 8px), 0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    .form-content {
+        margin: 32px;
+        outline-offset: 34px;
+    }
+
+    .form-content > * {
+        margin: 16px 0;
+    }
+
+    .form-title {
+        font-size: calc(24px * var(--rfso, var(--bfso, 1)));
+        font-weight: 700;
+    }
+
+    .form-body {
+        font-size: calc(14px * var(--rfso, var(--bfso, 1)));
+        font-weight: 400;
+        color: rgba(14, 19, 24, 0.7);
+    }
+
+    .form-body-bold {
+        font-size: calc(14px * var(--rfso, var(--bfso, 1)));
+        font-weight: 600;
+        line-height: 22.4px;
+        color: rgba(14, 19, 24, 1);
+    }
+
+    .form-radio-input {
+        display: grid;
+        grid-template-columns: 24px auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "radio-button radio-label"
+          ". radio-description"
+    }
+    .form-radio-input:hover {
+        cursor: pointer;
+    }
+
+    .radio-button-input {
+        opacity: 0;
+        margin: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .radio-button {
+        align-self: flex-start;
+        grid-area: radio-button;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 4px 8px 0 0;
+        vertical-align: middle;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1px rgba(53, 71, 90, .2);
+        outline: none;
+        background-color: #ffffff;
+        flex-shrink: 0;
+    }
+    .radio-button-input:checked + .radio-button {
+        background: #fff;
+        box-shadow: inset 0 0 0 5px #8b3dff;
+        transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
+    }
+    .form-radio-input:hover .radio-button-input:not(:checked) + .radio-button {
+        box-shadow: inset 0 0 0 1px rgba(30, 41, 51, .45);
+    }
+
+    .radio-button-input + .radio-button::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: transparent;
+        display: block;
+        margin: 5px;
+        border-radius: 50%;
+    }
+    .radio-button-input:checked + .radio-button::after {
+        background-color: #ffffff;
+        transition: background-color .1s ease-in-out;
+    }
+
+    .form-radio-label {
+        grid-area: radio-label;
+        font-size: calc(14px * var(--rfso, var(--bfso, 1)));
+        font-weight: 600;
+        line-height: 22.4px;
+        color: rgba(14, 19, 24, 1);
+    }
+
+    .form-radio-desc {
+        grid-area: radio-description;
+        font-size: calc(12px * var(--rfso, var(--bfso, 1)));
+        font-weight: 400;
+        color: rgba(14, 19, 24, 0.7);
+        margin: 0;
+    }
+
+    .g-recaptcha {
+        width: 300px;
+    }
+
+    .form-buttons {
+        margin-top: 32px;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: auto auto;
+        justify-content: flex-end;
+    }
+
+    .tertiary-button {
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        background-color: rgba(13, 18, 22, 0);
+        border-radius: 4px;
+        color: rgb(13, 18, 22);
+        cursor: pointer;
+        display: inline-flex;
+        height: 40px;
+        margin: 0;
+        max-width: 100%;
+        min-width: 80px;
+        width: 100%;
+        padding: 0 6px;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+        outline-offset: 2px;
+        transition: background-color 0.2s;
+    }
+    .tertiary-button:hover {
+        background-color: rgba(64, 87, 109, .07);
+    }
+    .tertiary-button:active {
+        background-color: rgba(57, 76, 96, .15);
+    }
+
+    .button {
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        background-color: rgba(64, 87, 109, 0.07);
+        border-radius: 4px;
+        color: #0e1318;
+        cursor: pointer;
+        display: inline-flex;
+        height: 40px;
+        margin: 0;
+        max-width: 100%;
+        min-width: 80px;
+        width: 100%;
+        padding: 0 6px;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+        outline-offset: 2px;
+        transition: background-color 0.2s;
+    }
+    .button:hover {
+        background-color: rgba(57, 76, 96, .15);
+    }
+    .button:active {
+        background-color: rgba(53, 71, 90, .2);
+    }
+
+    .submit-button {
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        background-color: #7d2ae8;
+        border-radius: 4px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        height: 40px;
+        margin: 0;
+        max-width: 100%;
+        min-width: 80px;
+        width: 100%;
+        padding: 0 6px;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+        outline-offset: 4px;
+        transition: background-color 0.2s;
+    }
+    .submit-button:hover {
+        background-color: #8d39fa;
+    }
+    .submit-button:active {
+        background-color: #6718cf;
+    }
+
+    .button-text {
+        font-size: calc(14px * var(--rfso, var(--bfso, 1)));
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    .submit-button.loading .button-text {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .submit-button.loading::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        margin: auto;
+        border: 4px solid transparent;
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 1s ease infinite;
+    }
+
+    .text-danger {
+        text-align: left;
+        margin: 4px 0 0;
+        color: #f84856;
+        font-size: calc(12px * var(--rfso, var(--bfso, 1)));
+    }
+
+    .a-link:visited {
+        color: rgba(14, 19, 24, 0.7)
+    }
+    .a-link {
+        text-decoration: underline;
+        color: rgba(14, 19, 24, 0.7)
+    }
+    .a-link:hover {
+        color: #7d2ae8;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0turn);
+        }
+
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    @supports selector(:focus-visible) {
+        .radio-button-input:focus-visible + .radio-button {
+            outline: auto;
+        }
+
+        .footer-pill-primary:focus-visible > .footer-pill-primary-background::after {
+            transform: translateX(110%);
+        }
+
+        .footer-pill-primary:focus-visible > .footer-pill-primary-background {
+            opacity: 1;
+        }
+
+        .footer-pill-primary:focus-visible > .footer-pill-primary-background .animation-container {
+            animation-play-state: running;
+        }
+    }
+
+    @supports not selector(:focus-visible) {
+        .radio-button-input:focus + .radio-button {
+            outline: auto;
+        }
+
+        .footer-pill-primary:focus > .footer-pill-primary-background::after {
+            transform: translateX(110%);
+        }
+
+        .footer-pill-primary:focus > .footer-pill-primary-background {
+            opacity: 1;
+        }
+
+        .footer-pill-primary:focus > .footer-pill-primary-background .animation-container {
+            animation-play-state: running;
+        }
+    }
+
+    /* stylelint-disable-next-line media-feature-name-disallowed-list */
+    @media only screen and (max-width: 600px) {
+        .modal-backdrop {
+            background-color: rgba(14, 19, 24, 0.45);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .report-form-modal {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px 8px 0 0;
+            transform: translate3d(0, 33%, 0);
+        }
+
+        .report-form-modal.active {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .form-content {
+            margin: 16px;
+        }
+
+        .form-buttons {
+            display: grid;
+            grid-gap: 8px;
+            grid-template-columns: 1fr;
+        }
+
+        .submit-button {
+            order: -1;
+        }
+
+        @supports (padding: env(safe-area-inset-bottom)) {
+            .footer-container {
+                padding: 6px 6px calc(6px + env(safe-area-inset-bottom)) 6px;
+            }
+
+            .form-content {
+                margin: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+            }
+        }
+    }
+    @media (prefers-reduced-motion) {
+        .report-form-modal, .report-form-modal.active {
+            transition-property: opacity, visibility;
+            transform: translate3d(0, calc(-100% + 8px), 0);
+        }
+        @media only screen and (max-width: 600px) {
+            .report-form-modal, .report-form-modal.active {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animation-container {
+            animation-play-state: paused !important;
+        }
+        .footer-pill-primary-background::after {
+            transform: translateX(0);
+            opacity: 0;
+            transition: opacity 0.7s;
+        }
+        .footer-pill-primary-background > svg {
+            display: none;
+        }
+    }
+</style><div class="footer-overflow-container" lang="nb-NO">
+  <div class="footer-container">
+    <button id="report_button" class="footer-pill footer-pill-secondary" type="button">
+      Vilkår og støtte
+    </button>
+    <a class="footer-pill footer-pill-primary footer-pill-link" target="_blank" href="https://www.canva.com" aria-label="Designet med Canva">
+      <div class="footer-pill-primary-background">
+        <svg viewBox="20 20 55 55" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="cyanSpotLarge" cx="0.5" cy="0.5" r="0.5" fx="0.8" fy="0.8" spreadMethod="pad">
+              <stop offset="0%" stop-color="rgb(0, 196, 204)" stop-opacity="1"></stop>
+              <stop offset="100%" stop-color="rgb(0, 196, 204)" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="cyanSpot" cx="0.5" cy="0.5" r="0.5" fx="0.2" fy="0.2" spreadMethod="pad">
+              <stop offset="0%" stop-color="rgb(0, 196, 204)" stop-opacity="0.75"></stop>
+              <stop offset="100%" stop-color="rgb(0, 196, 204)" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="purpleSpotLarge" cx="0.5" cy="0.5" r="0.5" fx="0.8" fy="0.8" spreadMethod="pad">
+              <stop offset="0%" stop-color="rgb(125, 42, 232)" stop-opacity="1"></stop>
+              <stop offset="100%" stop-color="rgb(125, 42, 232)" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="purpleSpot" cx="0.5" cy="0.5" r="0.5" fx="0.2" fy="0.2" spreadMethod="pad">
+              <stop offset="0%" stop-color="rgb(125, 42, 232)" stop-opacity="0.85"></stop>
+              <stop offset="100%" stop-color="rgb(125, 42, 232)" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <!-- Average the RGB values of the Cyan & Purple brand colors -> Blue rect background -->
+          <rect x="0" y="0" width="100" height="100" fill="rgb(62.5, 119, 218)"></rect>
+          <g class="animation-container">
+            <!-- Initial Rotation -->
+            <g transform="rotate(25)">
+              <!-- Large Spots -->
+              <g transform="rotate(0) scale(2) translate(-40, -40)">
+                <rect x="0" y="0" width="100" height="100" fill="url(#cyanSpotLarge)"></rect>
+              </g>
+              <g transform="rotate(180) scale(2) translate(-40, -40)">
+                <rect x="0" y="0" width="100" height="100" fill="url(#cyanSpotLarge)"></rect>
+              </g>
+              <g transform="rotate(90) scale(1.5) translate(-25, -25)">
+                <rect x="0" y="0" width="100" height="100" fill="url(#purpleSpotLarge)"></rect>
+              </g>
+              <g transform="rotate(270) scale(1.5) translate(-25, -25)">
+                <rect x="0" y="0" width="100" height="100" fill="url(#purpleSpotLarge)"></rect>
+              </g>
+              <!-- Small spots -->
+              <g transform="rotate(0) translate(-10, -10)">
+                <rect x="0" y="0" width="66" height="66" fill="url(#purpleSpot"></rect>
+              </g>
+              <g transform="rotate(180) translate(-10, -10)">
+                <rect x="0" y="0" width="66" height="66" fill="url(#purpleSpot"></rect>
+              </g>
+              <g transform="rotate(90) scale(1.2) translate(-10, -10)">
+                <rect x="0" y="0" width="66" height="66" fill="url(#cyanSpot)"></rect>
+              </g>
+              <g transform="rotate(270) scale(1.2) translate(-10, -10)">
+                <rect x="0" y="0" width="66" height="66" fill="url(#cyanSpot)"></rect>
+              </g>
+            </g>
+          </g>
+        </svg>
       </div>
-    </section>
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Intro -->
-      <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
-          <h1>Min Medieportefølje</h1>
-          <p>Utforsk mine prosjekter og ferdigheter innen medieproduksjon.</p>
-          <ul class="actions">
-            <li><a href="#one" class="button scrolly">Lær mer</a></li>
-          </ul>
+      Designet med 
+      <span class="inline-icon-logo">
+        <svg viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M79.444 18.096c-.136 0-.26.088-.324.272-.82 2.34-1.928 3.732-2.84 3.732-.524 0-.736-.584-.736-1.5 0-2.292 1.372-7.152 2.064-9.368.08-.268.132-.508.132-.712 0-.644-.352-.96-1.224-.96-.94 0-1.952.368-2.936 2.092-.34-1.52-1.368-2.184-2.804-2.184-1.66 0-3.264 1.068-4.584 2.8-1.32 1.732-2.872 2.3-4.04 2.02.84-2.056 1.152-3.592 1.152-4.732 0-1.788-.884-2.868-2.312-2.868-2.172 0-3.424 2.072-3.424 4.252 0 1.684.764 3.416 2.444 4.256-1.408 3.184-3.464 6.064-4.244 6.064-1.008 0-1.304-4.932-1.248-8.46.036-2.024.204-2.128.204-2.74 0-.352-.228-.592-1.144-.592-2.136 0-2.796 1.808-2.896 3.884a10.233 10.233 0 01-.368 2.332c-.892 3.184-2.732 5.6-3.932 5.6-.556 0-.708-.556-.708-1.284 0-2.292 1.284-5.156 1.284-7.6 0-1.796-.788-2.932-2.272-2.932-1.748 0-4.06 2.08-6.248 5.976.72-2.984 1.016-5.872-1.116-5.872A2.886 2.886 0 0036 9.916a.752.752 0 00-.432.728c.204 3.176-2.56 11.312-5.18 11.312-.476 0-.708-.516-.708-1.348 0-2.296 1.368-7.144 2.056-9.364.088-.288.136-.536.136-.752 0-.608-.376-.92-1.228-.92-.936 0-1.952.356-2.932 2.08-.344-1.52-1.372-2.184-2.808-2.184-2.356 0-4.988 2.492-6.144 5.74-1.548 4.336-4.668 8.524-8.868 8.524-3.812 0-5.824-3.172-5.824-8.184C4.068 8.312 9.38 2.4 13.32 2.4c1.884 0 2.784 1.2 2.784 3.04 0 2.228-1.244 3.264-1.244 4.112 0 .26.216.516.644.516 1.712 0 3.728-2.012 3.728-4.756S17.004.56 13.064.56C6.552.56 0 7.112 0 15.508c0 6.68 3.296 10.708 8.996 10.708 3.888 0 7.284-3.024 9.116-6.552.208 2.924 1.536 4.452 3.56 4.452 1.8 0 3.256-1.072 4.368-2.956.428 1.972 1.564 2.936 3.04 2.936 1.692 0 3.108-1.072 4.456-3.064-.02 1.564.336 3.036 1.692 3.036.64 0 1.404-.148 1.54-.708 1.428-5.904 4.956-10.724 6.036-10.724.32 0 .408.308.408.672 0 1.604-1.132 4.892-1.132 6.992 0 2.268.964 3.768 2.956 3.768 2.208 0 4.452-2.704 5.948-6.656.468 3.692 1.48 6.672 3.064 6.672 1.944 0 5.396-4.092 7.488-8.424.82.104 2.052.076 3.236-.76-.504 1.276-.8 2.672-.8 4.068 0 4.02 1.92 5.148 3.572 5.148 1.796 0 3.252-1.072 4.368-2.956.368 1.7 1.308 2.932 3.036 2.932 2.704 0 5.052-2.764 5.052-5.032 0-.6-.256-.964-.556-.964zM23.32 21.888c-1.092 0-1.52-1.1-1.52-2.74 0-2.848 1.948-7.604 4.008-7.604.9 0 1.24 1.06 1.24 2.356 0 2.892-1.852 7.988-3.728 7.988zm37.404-8.5c-.652-.776-.888-1.832-.888-2.772 0-1.16.424-2.14.932-2.14s.664.5.664 1.196c0 1.164-.416 2.864-.708 3.716zm8.468 8.5c-1.092 0-1.52-1.264-1.52-2.74 0-2.748 1.948-7.604 4.024-7.604.9 0 1.22 1.052 1.22 2.356 0 2.892-1.82 7.988-3.724 7.988z" fill="#fff"></path>
+        </svg>
+      </span>
+      
+    </a>
+  </div>
+  <div id="modal_backdrop" class="modal-backdrop"></div>
+  <div id="modal" class="report-form-modal" role="dialog">
+    <div class="form-content" id="form_step_terms" style="display: none;" aria-labelledby="termsTitle" aria-describedby="termsDesc" tabindex="0">
+      <h2 id="termsTitle" class="form-title">Vilkår og støtte</h2>
+      <p id="termsDesc" class="form-body">Dette nettstedet er opprettet med Canva, men innholdet er brukerinnhold som er underlagt våre <a class="a-link" href="https://www.canva.com/policies/terms-of-use/" target="_blank">vilkår for bruk</a>. Hvis du ser noe som bryter med <a class="a-link" href="https://www.canva.com/policies/acceptable-use-policy/" target="_blank">retningslinjene våre for akseptabel bruk</a>, ber vi deg rapportere det til teamet vårt for innholdsgjennomgang.</p>
+      <div class="form-buttons">
+        <button id="form_close_initial" type="button" class="tertiary-button">
+          <span class="button-text">
+            Lukk
+          </span>
+        </button>
+        <button id="form_report" data-report-url="https://www.canva.com/help/report-content/?source=design&amp;link=" type="button" class="button">
+          <span class="button-text">
+            Rapporter
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="form-content" id="form_step_report_reason" style="display: none;" aria-labelledby="reportTitle" aria-describedby="reportDesc" tabindex="0">
+      <h2 id="reportTitle" class="form-title">Rapporter</h2>
+      <p id="reportDesc" class="form-body">Rapportering hjelper Canva med å sikre at innholdet er passende og riktig
+merket.</p>
+      <p class="form-body-bold">Hvorfor rapporterer du dette innholdet?</p>
+      <label class="form-radio-input" for="report_reason_0">
+        <input id="report_reason_0" class="radio-button-input" type="radio" name="report_reason" value="0" autocomplete="off" checked="">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Upassende innhold
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_1">
+        <input id="report_reason_1" class="radio-button-input" type="radio" name="report_reason" value="1" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Hatefullt språk, aktiviteter eller diskriminering
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_2">
+        <input id="report_reason_2" class="radio-button-input" type="radio" name="report_reason" value="2" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Ulovlig innhold
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_3">
+        <input id="report_reason_3" class="radio-button-input" type="radio" name="report_reason" value="3" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Ærekrenkelse eller trakassering
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_4">
+        <input id="report_reason_4" class="radio-button-input" type="radio" name="report_reason" value="4" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Brudd på opphavsrettigheter
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_5">
+        <input id="report_reason_5" class="radio-button-input" type="radio" name="report_reason" value="5" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Feilinformasjon
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_6">
+        <input id="report_reason_6" class="radio-button-input" type="radio" name="report_reason" value="6" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Phishing
+        </span>
+      </label>
+      <label class="form-radio-input" for="report_reason_other">
+        <input id="report_reason_other" class="radio-button-input" type="radio" name="report_reason" value="7" autocomplete="off">
+        <span class="radio-button"></span>
+        <span class="form-radio-label">
+          Noe annet
+        </span>
+      </label>
+      <div class="form-buttons">
+        <button id="form_cancel" type="button" class="button">
+          <span class="button-text">Avbryt</span>
+        </button>
+        <button id="form_submit_reason" type="button" class="submit-button">
+          <span class="button-text">Neste</span>
+        </button>
+      </div>
+    </div>
+    <div class="form-content" id="form_step_report_ip" style="display: none;" aria-labelledby="ipTitle" aria-describedby="ipDesc" tabindex="0">
+      <h2 id="ipTitle" class="form-title">Brudd på opphavsrettigheter</h2>
+      <p id="ipDesc" class="form-body">Send inn et varsel om brudd på opphavsrett til Canva ved å følge trinnene i <a class="a-link" href="https://www.canva.com/policies/intellectual-property-policy/" target="_blank">retningslinjene for opphavsrett</a>.</p>
+      <div class="form-buttons">
+        <button id="form_go_back_ip" type="button" class="button">
+          <span class="button-text">Tilbake</span>
+        </button>
+        <button id="form_close_ip" type="button" class="submit-button">
+          <span class="button-text">Lukk</span>
+        </button>
+      </div>
+    </div>
+    <div class="form-content" id="form_step_report_other" style="display: none;" aria-labelledby="otherTitle" aria-describedby="otherDesc" tabindex="0">
+      <h2 id="otherTitle" class="form-title">Noe annet</h2>
+      <p id="otherDesc" class="form-body">Ta kontakt med Canva på <a class="a-link" href="mailto:privacy@canva.com" target="_blank">privacy@canva.com</a> og inkluder nettstedsadressen for å rapportere andre bekymringer.</p>
+      <div class="form-buttons">
+        <button id="form_go_back_other" type="button" class="button">
+          <span class="button-text">Tilbake</span>
+        </button>
+        <button id="form_close_other" type="button" class="submit-button">
+          <span class="button-text">Lukk</span>
+        </button>
+      </div>
+    </div>
+    <div class="form-content" id="form_step_captcha" style="display: none;" aria-labelledby="captchaTitle" aria-describedby="captchaDesc" tabindex="0">
+      <h2 id="captchaTitle" class="form-title">Rapporter</h2>
+      <p id="captchaDesc" class="form-body">La oss kontrollere at du er et menneske.</p>
+      <form id="captcha-form">
+        <div class="g-recaptcha" data-sitekey="6Ldk59waAAAAAMPqkICbJjfMivZLCGtTpa6Wn6zO"></div>
+        <div id="netease-captcha"></div>
+        <p id="error_message_captcha" class="text-danger" style="display: none;">
+          Du må fullføre verifiseringen.
+        </p>
+        <p id="error_message" class="text-danger" style="display: none;">
+          Vi kunne ikke sende inn rapporten din nå. Prøv på nytt senere.
+        </p>
+        <div class="form-buttons">
+          <button id="form_go_back" type="button" class="button">
+            <span class="button-text">Tilbake</span>
+          </button>
+          <button id="form_submit_captcha" type="submit" class="submit-button">
+            <span class="button-text">Send inn</span>
+          </button>
         </div>
-      </section>
-
-      <!-- One -->
-      <section id="one" class="wrapper style2 spotlights">
-        <section>
-          <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-          <div class="content">
-            <div class="inner">
-              <h2>Om meg</h2>
-              <p>Hei! Jeg heter [Ditt navn] og er en engasjert og kreativ mediaelev med stor interesse for visuell historiefortelling, teknologi og kommunikasjon. Jeg har gått VG1 Medier og kommunikasjon ved Kopervik videregående skole, og har også studert Informasjonsteknologi og medieproduksjon ved Haugaland videregående skole. Nå går jeg VG2 Medieproduksjon, hvor jeg videreutvikler ferdighetene mine innen film, foto, lyd og digital design.</p>
-              <p>Gjennom skolegangen har jeg fått god erfaring med både kreative og tekniske prosesser – fra idéutvikling og manusskriving til redigering og publisering. Jeg liker å jobbe både individuelt og i team, og trives best når jeg får uttrykke meg gjennom visuelle medier og skape innhold som engasjerer.</p>
-              <p>Jeg er alltid nysgjerrig på å lære mer og er opptatt av å utvikle meg som medieprodusent. I fremtiden ønsker jeg å jobbe innenfor mediebransjen, gjerne med filmproduksjon, markedsføring eller digitalt innhold.</p>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <!-- Two -->
-      <section id="two" class="wrapper style3 fade-up">
-        <div class="inner">
-          <h2>Mine prosjekter</h2>
-          <p>Her er noen av mine utvalgte prosjekter:</p>
-          <div class="features">
-            <section>
-              <span class="icon solid major fa-video"></span>
-              <h3>Filmprosjekt: "Skjulte historier"</h3>
-              <p>En dokumentar som utforsker lokale legender og historier fra vår region.</p>
-            </section>
-            <section>
-              <span class="icon solid major fa-camera"></span>
-              <h3>Fotoutstilling: "Lys og skygge"</h3>
-              <p>En samling portretter som undersøker kontrasten mellom lys og mørke.</p>
-            </section>
-            <section>
-              <span class="icon solid major fa-microphone"></span>
-              <h3>Podcast: "Stemmer fra fortiden"</h3>
-              <p>En serie intervjuer med eldre innbyggere som deler sine minner og erfaringer.</p>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <!-- Three -->
-      <section id="three" class="wrapper style1 fade-up">
-        <div class="inner">
-          <h2>Ferdigheter</h2>
-          <p>Mine tekniske og kreative ferdigheter inkluderer:</p>
-          <ul>
-            <li>Videoredigering (Adobe Premiere Pro, Final Cut Pro)</li>
-            <li>Fotoredigering (Adobe Photoshop, Lightroom)</li>
-            <li>Lydredigering (Audacity, Adobe Audition)</li>
-            <li>Webdesign (HTML, CSS, JavaScript)</li>
-            <li>Grafisk design (Adobe Illustrator, InDesign)</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Four -->
-      <section id="four" class="wrapper style1-alt fade-up">
-        <div class="inner">
-          <h2>Kontakt</h2>
-          <p>Ta gjerne kontakt med meg for samarbeid eller spørsmål:</p>
-          <ul class="contact">
-            <li>
-              <h3>Adresse</h3>
-              <span>[Din adresse]</span>
-            </li>
-            <li>
-              <h3>E-post</h3>
-              <a href="mailto:[din.epost@domene.no]">[din.epost@domene.no]</a>
-            </li>
-            <li>
-              <h3>Telefon</h3>
-              <span>[Ditt telefonnummer]</span>
-            </li>
-            <li>
-              <h3>Social</h3>
-              <ul class="icons">
-                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-              </ul>
-            </li>
-
-::contentReference[oaicite:0]{index=0}
- 
+      </form>
+    </div>
+    <div class="form-content" id="form_step_success" style="display: none;" aria-labelledby="thanksTitle" aria-describedby="thanksDesc" tabindex="0">
+      <h2 id="thanksTitle" class="form-title">Takk</h2>
+      <p id="thanksDesc" class="form-body">Takk for at du markerer dette innholdet som upassende. Teamet vårt for innholdsgjennomgang vil vurdere det så snart som mulig.</p>
+      <div class="form-buttons">
+        <button id="form_close" type="button" class="submit-button">
+          <span class="button-text">
+            Lukk
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div></div></div></div></div></div></div></main></div></div><script nonce="">(function() {window['__canva_public_path__'] = '_assets\/'; window['bootstrap'] = JSON.parse('{"base":{"A?":"B","L":false,"N":false,"E":"216529f08ebf1eec0626fd6c63a8d4c45aa2e9b0","K":1738312472,"F":{"A?":"B"},"G":"CLIENT_FULL","I":"A","O":{"A?":"B"},"M":"/_online","U":[],"V":[],"a":{"K":"export_website","H":{}},"d":{"A":"wss://www.canva.com/_stream","B":{"F":"export_website"}},"b":{"A?":"H","C":{"a":"WEB"},"D":{"a":"WEB","c":"en"},"E":{},"P":[],"Q":[],"R":false,"S":false}},"page":{"A":{"B":{"A?":"A","A":"TAEXfxtKgiU","B":1},"C":{"A":1366.0,"B":768.0,"C":"D"},"Q":[],"R":[],"P":"en","D":"Portfolio","E":"","F":[],"G":{},"Y":{},"V":[],"W":[],"A":[{"A?":"i","a":"PB3DH1WDGjKflr1m","B":"Framside","R":false,"S":false,"U":false,"M":9000000.0,"Q":{},"K":20,"W":[],"X":[],"H":[],"L":{},"G":{"A":"EAE72uqpJA8","B":3,"C":1},"D":{"C":"#0d0d0d","D":0.0,"F":false,"J":false,"G":false,"H":false},"r":[],"E":[{"A?":"I","A":90.34186265097105,"B":784.773426573426,"D":369.8229710108264,"C":554.7344565162397,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAGHJzdLuTo","B":1},"B":{"A":0.0,"B":-5.6843418860808015E-14,"D":369.82297101082645,"C":554.7344565162397,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"K","A":251.45151938392124,"B":134.41701034006712,"D":613.9292291717899,"C":171.5336325,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"title","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"portfolio:\\nKristian Andersen\\n"}],"B":[{"A?":"A","A":{"text-transform":{"B":"none"},"font-size":{"B":"109.623"},"font-family":{"B":"YADK3_DWcOc,0"},"color":{"B":"#acacac"},"font-style":{"B":"normal"},"font-weight":{"B":"normal"},"leading":{"B":"870.0"},"tracking":{"B":"-20.0"}}},{"A?":"B","A":11},{"A?":"A","A":{"font-family":{"B":"YADK4O60vp0,0"},"font-size":{"B":"57.2475"},"tracking":{"B":"0.0"}}},{"A?":"B","A":18},{"A?":"A","A":{"text-transform":{},"font-size":{},"font-family":{},"color":{},"font-style":{},"font-weight":{},"leading":{},"tracking":{}}}]},"b":{"A":[11,18]},"d":"A","l":false,"g":false,"h":"A"},{"A?":"K","A":723.1740968019791,"B":0.0,"D":268.8340206801342,"C":29.0,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"heading","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Jobb med meg\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"text-align":{"B":"end"},"text-transform":{"B":"none"},"decoration":{"B":"underline"},"font-style":{"B":"normal"},"color":{"B":"#8e8e8e"},"tracking":{"B":"0.0"},"font-weight":{"B":"normal"},"link":{"B":"#page-0"},"font-family":{"B":"YADK4O60vp0,0"},"font-size":{"B":"24.2392"}}},{"A?":"B","A":12},{"A?":"A","A":{"spacing":{"B":"0.0"},"list-level":{"B":"0.0"},"direction":{"B":"ltr"},"head-indent":{"B":"0.0"},"style":{"B":"body"},"kerning":{"B":"0.0"},"list-marker":{"B":"none"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-size":{},"font-style":{},"style":{},"link":{},"list-marker":{},"kerning":{},"head-indent":{},"spacing":{},"color":{},"text-transform":{},"decoration":{},"font-weight":{},"direction":{},"list-level":{},"leading":{},"tracking":{},"text-align":{},"font-family":{}}}]},"b":{"A":[13]},"d":"C","l":false,"g":false,"h":"A"}],"I":[]},{"A?":"i","a":"PBXLY76rf8JCJNkV","B":"Ferdigheter","R":false,"S":false,"U":false,"M":6500000.0,"Q":{},"K":3,"W":[],"X":[],"H":[],"L":{},"G":{"A":"EAE72uqpJA8","B":3,"C":6},"D":{"C":"#95a3be","D":0.0,"F":false,"J":false,"G":false,"H":false},"r":[],"E":[{"A?":"K","A":34.07454429548301,"B":496.2179431793015,"D":665.5831339915626,"C":88.640143,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"heading2","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Ferdigheter\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"74.6671"},"leading":{"B":"870.0"},"color":{"B":"#111118"},"text-transform":{"B":"uppercase"},"decoration":{"B":"underline"},"font-family":{"B":"YAEsdklG4-k,0"}}},{"A?":"B","A":11},{"A?":"A","A":{"list-level":{"B":"0.0"},"text-align":{"B":"start"},"tracking":{"B":"0.0"},"font-style":{"B":"normal"},"direction":{"B":"ltr"},"list-marker":{"B":"none"},"kerning":{"B":"0.0"},"font-weight":{"B":"normal"},"head-indent":{"B":"0.0"},"link":{"B":""},"spacing":{"B":"0.0"},"style":{"B":"body"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-size":{},"font-style":{},"style":{},"link":{},"list-marker":{},"kerning":{},"head-indent":{},"spacing":{},"color":{},"text-transform":{},"decoration":{},"font-weight":{},"direction":{},"list-level":{},"leading":{},"tracking":{},"text-align":{},"font-family":{}}}]},"b":{"A":[12]},"d":"A","l":false,"g":false,"h":"A"},{"A?":"K","A":372.839463369352,"B":508.74221185869044,"D":494.87653059254666,"C":66.320511,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"heading2","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Utdanning\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"55.5167"},"leading":{"B":"870.0"},"color":{"B":"#111118"},"text-transform":{"B":"uppercase"},"decoration":{"B":"underline"},"font-family":{"B":"YAEsdklG4-k,0"}}},{"A?":"B","A":9},{"A?":"A","A":{"list-level":{"B":"0.0"},"text-align":{"B":"start"},"tracking":{"B":"0.0"},"font-style":{"B":"normal"},"direction":{"B":"ltr"},"list-marker":{"B":"none"},"kerning":{"B":"0.0"},"font-weight":{"B":"normal"},"head-indent":{"B":"0.0"},"link":{"B":""},"spacing":{"B":"0.0"},"style":{"B":"body"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-size":{},"font-style":{},"style":{},"link":{},"list-marker":{},"kerning":{},"head-indent":{},"spacing":{},"color":{},"text-transform":{},"decoration":{},"font-weight":{},"direction":{},"list-level":{},"leading":{},"tracking":{},"text-align":{},"font-family":{}}}]},"b":{"A":[10]},"d":"A","l":false,"g":false,"h":"A"},{"A?":"K","A":137.0621598482312,"B":508.74221185869044,"D":544.9720004637431,"C":97.97524882936476,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"heading4","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Forståelse  for  redigerings program\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"color":{"B":"#111118"},"font-family":{"B":"YAEt1cjGqjs,0"},"font-size":{"B":"38.6664"}}},{"A?":"B","A":36},{"A?":"A","A":{"decoration":{"B":"none"},"tracking":{"B":"0.0"},"text-align":{"B":"start"},"list-level":{"B":"0.0"},"style":{"B":"body"},"spacing":{"B":"0.0"},"link":{"B":""},"head-indent":{"B":"0.0"},"kerning":{"B":"0.0"},"text-transform":{"B":"none"},"list-marker":{"B":"none"},"direction":{"B":"ltr"}}},{"A?":"B","A":1},{"A?":"A","A":{"link":{},"head-indent":{},"tracking":{},"list-level":{},"style":{},"decoration":{},"text-transform":{},"kerning":{},"list-marker":{},"leading":{},"text-align":{},"spacing":{},"color":{},"font-family":{},"direction":{},"font-size":{}}}]},"b":{"A":[29,8]},"d":"A","e":511.73561324640775,"f":92.0,"l":false,"g":false,"h":"A"},{"A?":"K","A":265.037408677596,"B":483.6944769230922,"D":457.3551223682705,"C":79.80205469175606,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"heading4","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Grunnlegende ferdigheter i 3D - Printing \\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"38.6664"},"font-family":{"B":"YAEt1cjGqjs,0"},"color":{"B":"#111118"}}},{"A?":"B","A":41},{"A?":"A","A":{"list-level":{"B":"0.0"},"text-align":{"B":"start"},"tracking":{"B":"0.0"},"decoration":{"B":"none"},"direction":{"B":"ltr"},"list-marker":{"B":"none"},"text-transform":{"B":"none"},"kerning":{"B":"0.0"},"head-indent":{"B":"0.0"},"link":{"B":""},"spacing":{"B":"0.0"},"style":{"B":"body"}}},{"A?":"B","A":1},{"A?":"A","A":{"style":{},"list-level":{},"tracking":{},"head-indent":{},"link":{},"font-size":{},"direction":{},"font-family":{},"color":{},"spacing":{},"text-align":{},"leading":{},"list-marker":{},"kerning":{},"text-transform":{},"decoration":{}}}]},"b":{"A":[32,10]},"d":"A","e":527.2630062021149,"f":92.0,"l":false,"g":false,"h":"A"},{"A?":"I","A":76.80000000000001,"B":54.15978311876421,"D":392.7766787219223,"C":569.1258469143368,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"photo","P":[],"5":{},"T":{},"W":{},"a":{"A":true,"B":{"A":{"A":"MADrOYGjSyI","B":1},"B":{"A":-740.0093261124446,"B":-152.28222367212777,"D":736.3885348275645,"C":1309.1351730267813,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":true,"H":false},"d":{"A":33.0,"B":"#111118","C":[],"f":true},"e":[]},{"A?":"K","A":439.159974369352,"B":508.74221185869044,"D":278.6138263726446,"C":77.37353968196429,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Grunnskole utdanning\\n2012 - 2022\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"29.6642"},"font-family":{"B":"YAEt1cjGqjs,0"},"text-align":{"B":"center"},"color":{"B":"#111118"}}},{"A?":"B","A":32},{"A?":"A","A":{"text-transform":{"B":"none"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"}}},{"A?":"B","A":1},{"A?":"A","A":{"text-transform":{},"font-size":{},"font-family":{},"spacing":{},"color":{},"text-align":{},"leading":{},"tracking":{}}}]},"b":{"A":[21,12]},"d":"A","e":252.0625,"f":70.0,"l":false,"g":false,"h":"B"},{"A?":"K","A":405.999718869352,"B":858.3560382313351,"D":327.8354533374822,"C":104.99796831445619,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Media og Kommunikasjon VG1\\nKopervik Vidergående\\n2022 - 2023\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"24.0001"},"leading":{"B":"1200.0"},"color":{"B":"#111118"},"text-align":{"B":"center"},"font-family":{"B":"YAEt1cjGqjs,0"}}},{"A?":"B","A":59},{"A?":"A","A":{"text-transform":{"B":"none"},"tracking":{"B":"0.0"},"spacing":{"B":"0.0"}}},{"A?":"B","A":1},{"A?":"A","A":{"text-transform":{},"tracking":{},"leading":{},"text-align":{},"color":{},"spacing":{},"font-family":{},"font-size":{}}}]},"b":{"A":[27,21,12]},"d":"A","e":262.2734375,"f":84.0,"l":false,"g":false,"h":"B"},{"A?":"K","A":546.4198247148663,"B":446.93646184068643,"D":556.6822806105506,"C":110.37534270500115,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Informasjonsteknologi og medieproduksjon VG1\\nHaugaland Vidergående skole\\n2023 - 2024\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"27.4893"},"leading":{"B":"1200.0"},"color":{"B":"#111118"},"text-align":{"B":"center"},"font-family":{"B":"YAEt1cjGqjs,0"}}},{"A?":"B","A":84},{"A?":"A","A":{"text-transform":{"B":"none"},"tracking":{"B":"0.0"},"spacing":{"B":"0.0"}}},{"A?":"B","A":1},{"A?":"A","A":{"text-transform":{},"tracking":{},"leading":{},"text-align":{},"color":{},"spacing":{},"font-family":{},"font-size":{}}}]},"b":{"A":[45,28,12]},"d":"A","e":484.1796875,"f":96.0,"l":false,"g":false,"h":"B"},{"A?":"K","A":178.35943060859154,"B":756.1804771549638,"D":501.5652972463711,"C":80.79573484721269,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Grunnlegende ferdigheter i  \\nUnreal Engine og html \\n"}],"B":[{"A?":"A","A":{"text-align":{"B":"center"},"font-size":{"B":"21.5922"},"font-family":{"B":"YAEt1cjGqjs,0"},"color":{"B":"#111118"}}},{"A?":"B","A":52},{"A?":"A","A":{"text-align":{},"font-size":{},"font-family":{},"color":{}}}]},"b":{"A":[29,23]},"d":"A","e":345.66104566477776,"f":55.68156,"l":false,"g":false,"h":"A"},{"A?":"K","A":599.7211854038169,"B":941.0495992913627,"D":351.2185508018142,"C":114.14796403210106,"E":0.0,"F":0.0,"Q":false,"S":false,"2":{"A":"","B":false},"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Medieproduksjon VG2\\nHaugaland Vidergående skole\\n2024 - 2025\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"32.7889"},"leading":{"B":"1200.0"},"color":{"B":"#111118"},"text-align":{"B":"center"},"font-family":{"B":"YAEt1cjGqjs,0"}}},{"A?":"B","A":59},{"A?":"A","A":{"font-style":{"B":"normal"},"font-weight":{"B":"normal"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"},"text-transform":{"B":"none"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-style":{},"spacing":{},"font-family":{},"text-transform":{},"font-size":{},"leading":{},"color":{},"font-weight":{},"text-align":{},"tracking":{}}}]},"b":{"A":[20,28,12]},"d":"A","e":359.99389732659677,"f":117.0,"l":false,"g":false,"h":"A"},{"A?":"K","A":314.79990876891276,"B":695.5808977567514,"D":466.22017941411264,"C":36.25168466992051,"E":0.0,"F":0.0,"Q":false,"S":false,"2":{"A":"","B":false},"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Ferdigheter i Kamrabruk\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"32.7889"},"leading":{"B":"1200.0"},"color":{"B":"#111118"},"text-align":{"B":"center"},"font-family":{"B":"YAEt1cjGqjs,0"}}},{"A?":"B","A":23},{"A?":"A","A":{"font-style":{"B":"normal"},"font-weight":{"B":"normal"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"},"text-transform":{"B":"none"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-style":{},"spacing":{},"font-family":{},"text-transform":{},"font-size":{},"leading":{},"color":{},"font-weight":{},"text-align":{},"tracking":{}}}]},"b":{"A":[24]},"d":"A","e":501.5652972463711,"f":39.0,"l":false,"g":false,"h":"A"}],"I":[]},{"A?":"i","a":"PB3f0gf6W3CZQQvV","B":"Tidligere Arbeid","R":false,"S":false,"U":false,"M":6000000.0,"P":"0","Q":{},"K":20,"W":[],"X":[],"H":[],"L":{},"G":{"A":"EAE72uqpJA8","B":3,"C":3},"D":{"C":"#0d0d0d","D":0.0,"F":false,"J":false,"G":false,"H":false},"r":[],"E":[{"A?":"I","A":222.7812759097832,"B":220.74373709558355,"D":425.5712264935058,"C":389.38031740259675,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAF_ePqcydU","B":1},"B":{"A":-27.345454545454572,"B":0.0,"D":425.5712264935059,"C":425.5712264935059,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"I","A":183.73053608607256,"B":831.5365879498427,"D":404.2165125510532,"C":544.6706842214708,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAF_eG9YRto","B":1},"B":{"A":-13.738636617609984,"B":-153.46715672669774,"D":715.5002299299898,"C":715.5002299299898,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"K","A":88.43636363636364,"B":100.44976902972093,"D":557.780549768089,"C":79.00326335879986,"E":0.0,"F":0.0,"Q":false,"S":false,"N":"heading1","P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Tidligere Arbeid:\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"81.5742"},"leading":{"B":"870.0"},"color":{"B":"#acacac"},"text-transform":{"B":"uppercase"},"decoration":{"B":"underline"},"font-family":{"B":"YAEsdklG4-k,0"}}},{"A?":"B","A":17},{"A?":"A","A":{"list-level":{"B":"0.0"},"text-align":{"B":"start"},"tracking":{"B":"0.0"},"font-style":{"B":"normal"},"direction":{"B":"ltr"},"list-marker":{"B":"none"},"kerning":{"B":"0.0"},"font-weight":{"B":"normal"},"head-indent":{"B":"0.0"},"link":{"B":""},"spacing":{"B":"0.0"},"style":{"B":"body"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-size":{},"font-style":{},"style":{},"link":{},"list-marker":{},"kerning":{},"head-indent":{},"spacing":{},"color":{},"text-transform":{},"decoration":{},"font-weight":{},"direction":{},"list-level":{},"leading":{},"tracking":{},"text-align":{},"font-family":{}}}]},"b":{"A":[18]},"d":"A","e":684.2730526054795,"f":96.919486,"l":false,"g":false,"h":"A"},{"A?":"K","A":105.89754661212095,"B":775.6476044749219,"D":343.5811132060003,"C":35.0,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"3D - Printet snømann\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"29.5889"},"font-family":{"B":"YAEt1cjGqjs,0"},"text-align":{"B":"center"},"color":{"B":"#acacac"}}},{"A?":"B","A":20},{"A?":"A","A":{"text-transform":{"B":"none"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"}}},{"A?":"B","A":1},{"A?":"A","A":{"text-transform":{},"font-size":{},"font-family":{},"spacing":{},"color":{},"text-align":{},"leading":{},"tracking":{}}}]},"b":{"A":[21]},"d":"A","l":false,"g":false,"h":"A"},{"A?":"K","A":137.4396269951635,"B":775.6476044749219,"D":311.1600414805197,"C":30.0,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"(Beklager bakrunnen!)\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"25.589"},"font-family":{"B":"YAEY8qS0Of8,0"},"text-align":{"B":"center"},"color":{"B":"#ff3131"}}},{"A?":"B","A":21},{"A?":"A","A":{"text-transform":{"B":"none"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"}}},{"A?":"B","A":1},{"A?":"A","A":{"text-transform":{},"font-size":{},"font-family":{},"spacing":{},"color":{},"text-align":{},"leading":{},"tracking":{}}}]},"b":{"A":[22]},"d":"A","l":false,"g":false,"h":"A"},{"A?":"K","A":622.7525024032891,"B":213.76191891376538,"D":331.15625,"C":37.0,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"T - Shorte Design og trykking\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"30.9222"},"font-family":{"B":"YAEt1cjGqjs,0"},"text-align":{"B":"center"},"color":{"B":"#acacac"}}},{"A?":"B","A":29},{"A?":"A","A":{"text-transform":{"B":"none"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"}}},{"A?":"B","A":1},{"A?":"A","A":{"text-transform":{},"font-size":{},"font-family":{},"spacing":{},"color":{},"text-align":{},"leading":{},"tracking":{}}}]},"b":{"A":[30]},"d":"A","l":false,"g":false,"h":"B"}],"I":[]},{"A?":"i","a":"PB7mYljzWngLrFLk","R":false,"S":false,"U":false,"Q":{},"K":20,"W":[],"X":[],"H":[],"L":{},"D":{"C":"#0d0d0d","D":0.0,"F":false,"J":false,"G":false,"H":false},"r":[],"E":[{"A?":"I","A":378.77856549233303,"B":24.19893546690446,"D":940.1227806357979,"C":334.0854172246476,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":true,"I":{"A":"VAGHKPArr-o","B":{"A":-97.36682344149432,"B":0.0,"D":940.1227806357977,"C":528.8190641076362,"E":0.0},"C":0.0,"J":{},"F":"A","I":true,"G":1.0},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"I","A":47.199934858505145,"B":423.1863413312445,"D":587.9591132142099,"C":303.6149291286966,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAGHJ4M2tiQ","B":1},"B":{"A":-41.10329670329682,"B":-1.7053025658242404E-13,"D":587.9591132142102,"C":419.5669770807448,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"K","A":103.02300784133054,"B":239.67072984537214,"D":160.3827510760778,"C":75.03893703606846,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Unreal Engine 4\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"32.7889"},"font-family":{"B":"YAEt1cjGqjs,0"},"text-align":{"B":"center"},"color":{"B":"#acacac"}}},{"A?":"B","A":15},{"A?":"A","A":{"text-transform":{"B":"none"},"tracking":{"B":"0.0"},"spacing":{"B":"0.0"},"font-weight":{"B":"normal"},"font-style":{"B":"normal"}}},{"A?":"B","A":1},{"A?":"A","A":{"spacing":{},"font-style":{},"tracking":{},"text-align":{},"font-weight":{},"color":{},"leading":{},"font-size":{},"text-transform":{},"font-family":{}}}]},"b":{"A":[7,9]},"d":"A","e":166.71151109084929,"f":78.0,"l":false,"g":false,"h":"A"},{"A?":"K","A":477.56038367415124,"B":976.2363636363634,"D":337.4,"C":78.0,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"En vignett laget i Premiere pro\\n"}],"B":[{"A?":"A","A":{"leading":{"B":"1200.0"},"font-size":{"B":"32.7889"},"font-family":{"B":"YAEt1cjGqjs,0"},"text-align":{"B":"center"},"color":{"B":"#acacac"}}},{"A?":"B","A":31},{"A?":"A","A":{"text-transform":{"B":"none"},"tracking":{"B":"0.0"},"spacing":{"B":"0.0"},"font-weight":{"B":"normal"},"font-style":{"B":"normal"}}},{"A?":"B","A":1},{"A?":"A","A":{"spacing":{},"font-style":{},"tracking":{},"text-align":{},"font-weight":{},"color":{},"leading":{},"font-size":{},"text-transform":{},"font-family":{}}}]},"b":{"A":[28,4]},"d":"A","l":false,"g":false,"h":"A"}],"I":[]},{"A?":"i","a":"PBkdJGWBQQqJ8DY0","R":false,"S":false,"U":false,"Q":{},"K":20,"W":[],"X":[],"H":[],"L":{},"D":{"C":"#0d0d0d","D":0.0,"F":false,"J":false,"G":false,"H":false},"r":[],"E":[{"A?":"I","A":20.837234592332436,"B":92.61698663182236,"D":316.1979543007829,"C":474.5935524214378,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAGdv-U9Y2k","B":1},"B":{"A":0.0,"B":-2.8421709430404007E-14,"D":316.19795430078295,"C":474.5935524214378,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"I","A":20.837234592332294,"B":408.8149409326053,"D":316.1979543007829,"C":474.5935524214378,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAGdwHRytG4","B":1},"B":{"A":0.0,"B":-2.8421709430404007E-14,"D":316.19795430078295,"C":474.5935524214378,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"I","A":20.837234592332464,"B":814.879111099684,"D":316.1979543007829,"C":474.5935524214378,"E":0.0,"F":0.0,"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":{"B":{"A":{"A":"MAGdwKaIcqU","B":1},"B":{"A":0.0,"B":-2.8421709430404007E-14,"D":316.19795430078295,"C":474.5935524214378,"E":0.0},"E":0.0,"C":{}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]},{"A?":"K","A":534.2626595637753,"B":97.72509718260523,"D":406.3515625,"C":39.0,"E":0.0,"F":0.0,"Q":false,"S":false,"2":{"A":"","B":false},"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Jobbet med photo og kamrabruk \\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"32.7889"},"leading":{"B":"1200.0"},"color":{"B":"#ffffff"},"text-align":{"B":"center"},"font-family":{"B":"YAEt1cjGqjs,0"}}},{"A?":"B","A":30},{"A?":"A","A":{"font-style":{"B":"normal"},"font-weight":{"B":"normal"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"},"text-transform":{"B":"none"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-style":{},"spacing":{},"font-family":{},"text-transform":{},"font-size":{},"leading":{},"color":{},"font-weight":{},"text-align":{},"tracking":{}}}]},"b":{"A":[31]},"d":"A","l":false,"g":false,"h":"B"},{"A?":"K","A":534.2626595637753,"B":767.4476294728115,"D":477.84375,"C":78.0,"E":0.0,"F":0.0,"Q":false,"S":false,"2":{"A":"","B":false},"P":[],"5":{},"T":{},"W":{},"a":{"A":[{"A?":"A","A":"Jobbet me bilde redigering i Lightroom\\n og Photoshop\\n"}],"B":[{"A?":"A","A":{"font-size":{"B":"32.7889"},"leading":{"B":"1200.0"},"color":{"B":"#ffffff"},"text-align":{"B":"center"},"font-family":{"B":"YAEt1cjGqjs,0"}}},{"A?":"B","A":52},{"A?":"A","A":{"font-style":{"B":"normal"},"font-weight":{"B":"normal"},"spacing":{"B":"0.0"},"tracking":{"B":"0.0"},"text-transform":{"B":"none"}}},{"A?":"B","A":1},{"A?":"A","A":{"font-style":{},"spacing":{},"font-family":{},"text-transform":{},"font-size":{},"leading":{},"color":{},"font-weight":{},"text-align":{},"tracking":{}}}]},"b":{"A":[39,14]},"d":"A","l":false,"g":false,"h":"B"}],"I":[]}],"I":[]},"Z":{"A?":"A","M":"en","e":true,"f":true,"g":{"A":"YAEt1cjGqjs-0","B":"#0d0d0d","C":"#ffffff"}},"B":[{"A":"YACgEZ1cb1Q","B":0,"C":"Arimo","D":[{"style":"BOLD","files":[{"url":"_assets/fonts/9fd726aeae98b22824f0dc8947036e77.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":234696},{"url":"_assets/fonts/98c4d2c0223fc8474641c77f923528e9.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":194064},{"url":"_assets/fonts/0bb563f2f60ffd4e62b64cb021c33776.otf","format":"OTF","unicodeRanges":[],"sizeBytes":438516}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-771,"yMax":2116},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-431,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":32}}},{"style":"ITALICS","files":[{"url":"_assets/fonts/ac9b8a560f98d1757a4565a2419d33c3.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":240632},{"url":"_assets/fonts/79d14bb61301a10c73c6cb293c29b309.otf","format":"OTF","unicodeRanges":[],"sizeBytes":440740},{"url":"_assets/fonts/d257a7100844bc3f98c9021168b6249e.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":201132}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-621,"yMax":2077},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-425,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":1}}},{"style":"BOLD_ITALICS","files":[{"url":"_assets/fonts/1060345c54d396e76d73f1da7ee200bd.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":203232},{"url":"_assets/fonts/4de29305db46625343735e840e3d27aa.otf","format":"OTF","unicodeRanges":[],"sizeBytes":435028},{"url":"_assets/fonts/7fc2786f9023d4d812357cb787e9ad4b.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":237660}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-771,"yMax":2109},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-431,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":33}}},{"style":"REGULAR","files":[{"url":"_assets/fonts/daee28464eba92254cb149feea6599e3.otf","format":"OTF","unicodeRanges":[],"sizeBytes":436180},{"url":"_assets/fonts/4ff8a742aa834e35f10ead140b735c45.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":234380},{"url":"_assets/fonts/f8f199f09526f79e87644ed227e0f651.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":194188}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-621,"yMax":2007},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-431,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":64}}}],"E":false},{"A":"YADK3_DWcOc","B":0,"C":"Arsenal","D":[{"style":"BOLD_ITALICS","files":[{"url":"_assets/fonts/fa0e948d80080c65ab01b8ec71ba7481.otf","format":"OTF","unicodeRanges":[],"sizeBytes":196428},{"url":"_assets/fonts/8d6059ed159f372c08a0e5fbd9397984.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":72012},{"url":"_assets/fonts/7c018bfc5eadd63a53b35aecc3f7dca3.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":85940}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-390,"yMax":1037},"hhea":{"ascender":1000,"descender":-254,"lineGap":0},"os2":{"sTypoAscender":1000,"sTypoDescender":-254,"sTypoLineGap":0,"usWinAscent":1037,"usWinDescent":339,"fsSelection":161}}},{"style":"REGULAR","files":[{"url":"_assets/fonts/4932642c0a3994cfd76990d2d5d7e16a.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":66996},{"url":"_assets/fonts/4d19e3542ef0229a5c67c78d2f31dfe3.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":80628},{"url":"_assets/fonts/1701424e65f234397f0f5a55f2caf8e7.otf","format":"OTF","unicodeRanges":[],"sizeBytes":194396}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-288,"yMax":1012},"hhea":{"ascender":1000,"descender":-254,"lineGap":0},"os2":{"sTypoAscender":1000,"sTypoDescender":-254,"sTypoLineGap":0,"usWinAscent":1044,"usWinDescent":339,"fsSelection":192}}},{"style":"BOLD","files":[{"url":"_assets/fonts/64d22fc140fa6380764cfd3943cdef07.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":82468},{"url":"_assets/fonts/c65de928cc20097dc6fdc6f8ac5bd5e8.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":68192},{"url":"_assets/fonts/d7dd73b1618fb76d53589119d0919864.otf","format":"OTF","unicodeRanges":[],"sizeBytes":200088}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-339,"yMax":1044},"hhea":{"ascender":1000,"descender":-254,"lineGap":0},"os2":{"sTypoAscender":1000,"sTypoDescender":-254,"sTypoLineGap":0,"usWinAscent":1044,"usWinDescent":339,"fsSelection":160}}},{"style":"ITALICS","files":[{"url":"_assets/fonts/723412a7b240906b43f96506af277bcd.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":83884},{"url":"_assets/fonts/98a55688d6d7bc73c79fdbc06adea80d.otf","format":"OTF","unicodeRanges":[],"sizeBytes":190480},{"url":"_assets/fonts/929525f0b1563bb219fea35792d3a69d.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":69896}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-383,"yMax":1005},"hhea":{"ascender":1000,"descender":-254,"lineGap":0},"os2":{"sTypoAscender":1000,"sTypoDescender":-254,"sTypoLineGap":0,"usWinAscent":1037,"usWinDescent":339,"fsSelection":129}}}],"E":false},{"A":"YADK4O60vp0","B":0,"C":"Radley","D":[{"style":"REGULAR","files":[{"url":"_assets/fonts/c06b2286f15a10982265c5804e8c88eb.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":45996},{"url":"_assets/fonts/ff6d18331d273cef1e9150cdc078dfa0.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":40728},{"url":"_assets/fonts/f31a75d9ae66a83f926f63b9a6d5d35e.otf","format":"OTF","unicodeRanges":[],"sizeBytes":92920}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-615,"yMax":1980},"hhea":{"ascender":1973,"descender":-615,"lineGap":0},"os2":{"sTypoAscender":1973,"sTypoDescender":-615,"sTypoLineGap":0,"usWinAscent":1980,"usWinDescent":615,"fsSelection":192}}},{"style":"ITALICS","files":[{"url":"_assets/fonts/fe81d9337868dcef98bdcd54ac415eed.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":44492},{"url":"_assets/fonts/8b4ba7e3450e7c7a03469cdc2f9ac767.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":40048},{"url":"_assets/fonts/0ac55ecd7f5ebacd94876814517a9c5b.otf","format":"OTF","unicodeRanges":[],"sizeBytes":80504}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-561,"yMax":1857},"hhea":{"ascender":1973,"descender":-615,"lineGap":0},"os2":{"sTypoAscender":1973,"sTypoDescender":-615,"sTypoLineGap":0,"usWinAscent":1980,"usWinDescent":615,"fsSelection":129}}}],"E":false},{"A":"YAEsdklG4-k","B":0,"C":"Brown Sugar","D":[{"style":"REGULAR","files":[{"url":"_assets/fonts/18695e4b97853338d7e9d3bd8eafa8ca.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":14768},{"url":"_assets/fonts/127fd00a1adcf7f9f015fab5341d6170.otf","format":"OTF_CFF","unicodeRanges":[],"sizeBytes":22200},{"url":"_assets/fonts/139be3e0f510c68a6922caabaea7575c.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":12532}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-289,"yMax":953},"hhea":{"ascender":750,"descender":-250,"lineGap":0},"os2":{"sTypoAscender":750,"sTypoDescender":-250,"sTypoLineGap":0,"usWinAscent":953,"usWinDescent":289,"fsSelection":64}}}],"E":false},{"A":"YAEt1cjGqjs","B":0,"C":"Bright Retro","D":[{"style":"ITALICS","files":[{"url":"_assets/fonts/2a5bf466c0d4e4e0887c39707409956d.otf","format":"OTF_CFF","unicodeRanges":[],"sizeBytes":42688},{"url":"_assets/fonts/81897506bf435fbfe42eece9be8b4261.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":30436},{"url":"_assets/fonts/e6b2f3b74bf2160e610c744ff1ecad78.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":25696}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-192,"yMax":790},"hhea":{"ascender":790,"descender":-193,"lineGap":-17},"os2":{"sTypoAscender":773,"sTypoDescender":-227,"sTypoLineGap":-17,"usWinAscent":807,"usWinDescent":193,"fsSelection":1}}},{"style":"REGULAR","files":[{"url":"_assets/fonts/02d09544723a21e53f510ccc569c1b9a.otf","format":"OTF_CFF","unicodeRanges":[],"sizeBytes":40832},{"url":"_assets/fonts/c31136f6829d6e64f663bfb8e4ae1130.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":29124},{"url":"_assets/fonts/8ef63dd14be782457a222c799c5980b2.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":24544}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-192,"yMax":790},"hhea":{"ascender":790,"descender":-193,"lineGap":-17},"os2":{"sTypoAscender":773,"sTypoDescender":-227,"sTypoLineGap":-17,"usWinAscent":807,"usWinDescent":193,"fsSelection":64}}}],"E":false},{"A":"YAEY8qS0Of8","B":0,"C":"Canva Student Font","D":[{"style":"REGULAR","files":[{"url":"_assets/fonts/a12173b2fab47a4cd067cd41b43f20d9.otf","format":"OTF_CFF","unicodeRanges":[],"sizeBytes":56844},{"url":"_assets/fonts/4f8bdc757a45351d466b1ce0ecfba753.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":26764},{"url":"_assets/fonts/e940f2e92cb39a02e43b1d2fc5f64b0c.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":31296}],"subsettedFiles":[],"metadata":{"head":{"unitsPerEm":1000,"yMin":-351,"yMax":736},"hhea":{"ascender":769,"descender":-360,"lineGap":0},"os2":{"sTypoAscender":769,"sTypoDescender":-360,"sTypoLineGap":0,"usWinAscent":736,"usWinDescent":351,"fsSelection":64}}}],"E":false}],"E":[{"type":"RASTER","id":"MAF_ePqcydU","version":1,"files":[{"url":"_assets/media/32e8b6202830394f82342aed3ae5a01e.jpg","urlDenied":false,"width":800,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAF_ePqcydU","version":1,"files":[{"url":"_assets/media/0146aea9037170face7234dc46bfcab2.jpg","urlDenied":false,"width":1600,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAF_ePqcydU","version":1,"files":[{"url":"_assets/media/adf151d53e86f56f8e2d8a37114045b1.jpg","urlDenied":false,"width":2400,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MADrOYGjSyI","version":1,"files":[{"url":"_assets/media/ee270d5f43162e95848f6b7d0073c629.jpg","urlDenied":false,"width":450,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MADrOYGjSyI","version":1,"files":[{"url":"_assets/media/183ce9229e47b65dd5271bcc466df4c5.jpg","urlDenied":false,"width":900,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MADrOYGjSyI","version":1,"files":[{"url":"_assets/media/861ecf5a0152ea0fa955be737f07019f.jpg","urlDenied":false,"width":1350,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGHJzdLuTo","version":1,"files":[{"url":"_assets/media/889a7820c50bd765c8e78c27e376fc2c.jpg","urlDenied":false,"width":533,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGHJzdLuTo","version":1,"files":[{"url":"_assets/media/37ae60842efd1605562f11492015f061.jpg","urlDenied":false,"width":1066,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGHJzdLuTo","version":1,"files":[{"url":"_assets/media/84af0ec04718b1219b9965ad48fc230b.jpg","urlDenied":false,"width":1600,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAF_eG9YRto","version":1,"files":[{"url":"_assets/media/0ca2f472863a14a43af352404163335a.jpg","urlDenied":false,"width":800,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAF_eG9YRto","version":1,"files":[{"url":"_assets/media/a2b50c38fe927554eb38cf6e50804562.jpg","urlDenied":false,"width":1600,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAF_eG9YRto","version":1,"files":[{"url":"_assets/media/4fae7e47a28bd26d4a0dfd04454f6ac7.jpg","urlDenied":false,"width":2400,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdwHRytG4","version":1,"files":[{"url":"_assets/media/60e0251057b34d5aefda077ac23f6075.jpg","urlDenied":false,"width":533,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdwHRytG4","version":1,"files":[{"url":"_assets/media/cf9894cef33db98054687d1491c09edc.jpg","urlDenied":false,"width":1066,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdwHRytG4","version":1,"files":[{"url":"_assets/media/391096a16d9817feb08255f457f8d17e.jpg","urlDenied":false,"width":1600,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdv-U9Y2k","version":1,"files":[{"url":"_assets/media/bd0b61f61ac3968c6d4fd940a363ac4e.jpg","urlDenied":false,"width":533,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdv-U9Y2k","version":1,"files":[{"url":"_assets/media/45251c15350f47229da1cad4a4b5cf61.jpg","urlDenied":false,"width":1066,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdv-U9Y2k","version":1,"files":[{"url":"_assets/media/f4479911ad0e7ccac542559c49e52936.jpg","urlDenied":false,"width":1600,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdwKaIcqU","version":1,"files":[{"url":"_assets/media/6698035e0f862a79bc7515ae0c8f6ffe.jpg","urlDenied":false,"width":533,"height":800,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdwKaIcqU","version":1,"files":[{"url":"_assets/media/201208dc2882223aab6df14ccba3fdd7.jpg","urlDenied":false,"width":1066,"height":1600,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGdwKaIcqU","version":1,"files":[{"url":"_assets/media/229b8ce5ac018303ea10218e10782873.jpg","urlDenied":false,"width":1600,"height":2400,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/jpeg"}]},{"type":"RASTER","id":"MAGHJ4M2tiQ","version":1,"files":[{"url":"_assets/media/e92c3a9e64745395389cbfd5596c38ab.png","urlDenied":false,"width":800,"height":570,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN","mimeType":"image/png"}]},{"type":"RASTER","id":"MAGHJ4M2tiQ","version":1,"files":[{"url":"_assets/media/c8426060b898d86029be09f47b47663c.png","urlDenied":false,"width":1456,"height":1039,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_2X","mimeType":"image/png"}]},{"type":"RASTER","id":"MAGHJ4M2tiQ","version":1,"files":[{"url":"_assets/media/c8426060b898d86029be09f47b47663c.png","urlDenied":false,"width":1456,"height":1039,"watermarked":false,"spritesheet":false,"recoloring":{},"quality":"SCREEN_3X","mimeType":"image/png"}]}],"F":[{"id":"VAGHKPArr-o","files":[{"url":"_assets/video/e5088f5a438aa6a6ad14741743950a5f.mp4","width":1280,"height":720,"container":"A","watermarked":false}],"dashVideoFiles":[{"A?":"A","x":6295316,"y":"avc1.640028","z":{"A":0,"B":820},"0":{"A":821,"B":1196},"1":"_assets/video/2040a36038c1c286a1adc3e1dd4f8ad8.mp4","A":1920,"B":1080,"C":false,"D":"A"},{"A?":"A","x":513585,"y":"avc1.640014","z":{"A":0,"B":819},"0":{"A":820,"B":1195},"1":"_assets/video/ee9758a5745c72d07dda07038f8ee06a.mp4","A":320,"B":180,"C":false,"D":"A"},{"A?":"A","x":1537683,"y":"avc1.64001e","z":{"A":0,"B":819},"0":{"A":820,"B":1195},"1":"_assets/video/ad933e8894cd9f90a581d87ab39635ca.mp4","A":640,"B":360,"C":false,"D":"A"},{"A?":"A","x":4157723,"y":"avc1.64001f","z":{"A":0,"B":819},"0":{"A":820,"B":1195},"1":"_assets/video/0560d93b8051078a53d48e09481e5e79.mp4","A":1280,"B":720,"C":false,"D":"A"}],"dashAudioFiles":[{"A?":"B","x":200306,"y":"mp4a.40.2","z":{"A":0,"B":748},"0":{"A":749,"B":1124},"1":"_assets/video/9f26ec4f0b1332b58d1014ec871dc401.m4a"}],"width":3840,"height":2160,"durationSeconds":55.255208,"posterframeUrls":[],"posterframes":[{"A":"_assets/video/d5f1a5a32eec730ab5c4882b78d769f1.jpg"}],"videoTimelines":[{"A":256,"B":144,"G":30,"C":5,"D":6,"E":1.0,"F":"_assets/video/c2a46386a2bd93032c5c4be3007eadb5.jpg"},{"A":256,"B":144,"G":26,"C":5,"D":6,"E":1.0,"F":"_assets/video/6101fb5b50d81d4d9c8a74108a945d94.jpg"}],"contentType":"VIDEO","hlsManifestUrl":"_assets/video/99442f466d7eae01e1a6c08db53dc31f.m3u","modifiers":[]}],"G":[],"H":[],"S":[],"K":{"A":"YAEt1cjGqjs-0","B":"#0d0d0d","C":"#ffffff"},"Q":{"A":false,"B":true,"M":true},"R":false},"ui":{"N":false,"A":true,"B":"A","C":false,"D":false,"K":"A","I":false,"J":false}}'); window['flags'] = JSON.parse('{}'); window['cmsg'] = window['cmsg'] || { locale: "en", strings: {} };})();</script><script crossorigin="anonymous" src="_assets/0ce63cefb0eb8230.strings.js" integrity="sha512-buAXN+vDz2M84c823uajnWtVHO/YbFs3YBNV7WK8GjC2zg+Uepf0jGVov/aWyX65ha869EzZBIjWfYqZlD2k4Q==" nonce=""></script><script crossorigin="anonymous" src="_assets/041533caa501c2ad.en.js" integrity="sha512-U/NcpiYW3sMfb2HAanqcC5Cgs8TEiIJs89D+Ju1glm6Rjs9NSS/5DKOHhRXtHecFqVZRJpOmLm0ze3ZQN3x2TA==" nonce=""></script><script crossorigin="anonymous" src="_assets/f6279fd6de5cde5a.runtime.js" defer="" integrity="sha512-BoSZcKMzFR6uLzPNDVSRfEfufVT++4KsQC/BGxhKT0guErbce9jpx0dT2KByplUeX9Y+OsZNI4FL2MkICq2lVw==" nonce=""></script><script crossorigin="anonymous" src="_assets/6b0b6cd7b4380852.i3d79q.vendor.js" defer="" integrity="sha512-glSI1ZcMUx+fEJqWv9YcgE1tNCr56/uOkUR+FNrA606NNtXNGexG48WkOpi04ftgEqTi5xPNF+dwTGeSe9T0aw==" nonce=""></script><script crossorigin="anonymous" src="_assets/1e90d697c2926901.vendor.js" defer="" integrity="sha512-GCWBdTLF0E5G6JK5alfe1ZLT7VNy99iy8ibldJiIfZuEsdT+Y2PpNnVaaWDJVLiG8BfS0Aeijs6o7VgUXjZUew==" nonce=""></script><script crossorigin="anonymous" src="_assets/62fcd7b47ea787d8.js" defer="" integrity="sha512-BdJOE73DLL3Olzduh2vNA/Uk9FhH8r+Rop3fh9dqzChixCK+Jt9kXz+iLaduPGuCit0h/pvLLXQSSuIZLLlNsA==" nonce=""></script><div class="Q_Mxww"></div><div class="i7CgFw"></div><div class="BghEng"></div><div class="sOABQQ"></div><div class="sOABQQ"></div></body></html>
